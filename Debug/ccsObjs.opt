@@ -1,0 +1,1 @@
+"./LCD1x9.obj" "./cc430radio.obj" "./main.obj" "./pmm.obj" "./rf1a.obj" "./wiring_analog.obj" "./wiring_digital.obj" "../lnk_cc430f5137.cmd" -llibmath.a -llibc.a 
