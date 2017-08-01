@@ -11,7 +11,7 @@
 #include <pt-sem.h>
 #include "timer1a0.h"
 
-
+//test
 
 #define RFCHANNEL        0       // Let's use channel 0
 #define SYNCWORD1        0xFF    // Synchronization word, high byte
@@ -35,6 +35,23 @@ CCPACKET packet;   //Declare global packet
 CC430RADIO radio;  //Radio object
 
 TIMER1A0 timer;	   //Timer object
+
+enum CHIPSTATE
+{
+	BROADCASTING = 0,
+	MAYBE_CLIENT,
+	CLIENT,
+	SERVER
+};
+
+enum MESSAGE_TYPE
+{
+	BROADCAST = 0x01,
+	SERVER_REQUEST,
+	SERVER_ACK,
+	DATA_REQUEST,
+	DATA_SERVICE
+};
 
 
 /*
@@ -134,6 +151,7 @@ int main(void) {
     radio.init();								//initialize radio
     radio.disableAddressCheck();				//disable address check
     radio.enableCCA(false);						//disable CCA
+
 
     /*
      * Protothreads initializations (threads and semaphores)
