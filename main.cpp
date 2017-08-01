@@ -12,6 +12,7 @@
 #include "timer1a0.h"
 
 
+
 #define RFCHANNEL        0       // Let's use channel 0
 #define SYNCWORD1        0xFF    // Synchronization word, high byte
 #define SYNCWORD0        0x00    // Synchronization word, low byte
