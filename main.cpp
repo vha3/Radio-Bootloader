@@ -1,7 +1,6 @@
 #include <msp430.h>
 #include "pins.h"
 #include "wiring.h"
-#include "LCD1x9.h"
 #include "cc430flash.h"
 #include "ccpacket.h"
 #include "cc430f5137.h"
@@ -20,7 +19,7 @@
 #define DESTINATION_ADDR 0       // Receiver address
 
 #define BEACON_TIMEOUT   2000	 // Send thread timeout
-#define BEACON_THRESHOLD 1000	 // Send thread
+#define BEACON_THRESHOLD 500	 // Send thread threshold
 
 // Protothread structs
 static struct pt pt_polling, pt_receiving, pt_sending;
@@ -34,7 +33,7 @@ uint8_t bytes;     //Global int to hold number of bytes in RXFIFO
 CCPACKET packet;   //Declare global packet
 CC430RADIO radio;  //Radio object
 
-TIMER1A0 timer;
+TIMER1A0 timer;	   //Timer object
 
 
 /*

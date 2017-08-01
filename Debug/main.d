@@ -15,7 +15,6 @@ main.obj: /Applications/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include/l
 main.obj: /Applications/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include/math.h
 main.obj: /Applications/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include/_defs.h
 main.obj: ../binary.h
-main.obj: ../LCD1x9.h
 main.obj: ../cc430flash.h
 main.obj: ../datatypes.h
 main.obj: ../ccpacket.h
@@ -45,7 +44,6 @@ main.obj: ../timer1a0.h
 /Applications/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include/math.h: 
 /Applications/ccsv6/tools/compiler/ti-cgt-msp430_15.12.1.LTS/include/_defs.h: 
 ../binary.h: 
-../LCD1x9.h: 
 ../cc430flash.h: 
 ../datatypes.h: 
 ../ccpacket.h: 
